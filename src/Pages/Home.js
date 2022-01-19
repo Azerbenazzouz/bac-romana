@@ -1,5 +1,6 @@
 import React from 'react'
 import Carouselp from '../Components/Carousel/Carouselp'
+import Top3 from '../Components/Top3/Top3'
 
 function Home() {
     const photos = [
@@ -11,6 +12,7 @@ function Home() {
     return (
         <div>
             <Carouselp photos={photos}/>
+            <Top3/>
         </div>
     )
 }
