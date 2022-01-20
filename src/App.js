@@ -8,14 +8,14 @@ import { Route, Switch, BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <BrowserRouter>
+      <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/list" component={List} />
         </Switch>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </div>
   );
 }
