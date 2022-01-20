@@ -27,13 +27,13 @@ function Navbar() {
             <Link className="nav-link" to="/list">
               Liste des donateurs
             </Link>
-            <Link className="nav-link" to="#">
+            <Link className="nav-link" to="/Videos">
               Videos
             </Link>
-            <Link className="nav-link" to="#">
+            <Link className="nav-link" to="/Photos">
               Photos
             </Link>
-            <Link className="nav-link" to="#">
+            <Link className="nav-link" to="/Sondages">
               Sondages
             </Link>
           </div>
