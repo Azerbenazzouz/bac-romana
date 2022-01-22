@@ -47,5 +47,8 @@
     ]
   },
   "keywords": [],
-  "description": "bac"
+  "description": "bac",
+  "devDependencies": {
+    "mini-css-extract-plugin": "^2.5.2"
+  }
 }

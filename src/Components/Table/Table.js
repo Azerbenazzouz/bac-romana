@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import "./table.css"
 import Avatar from '@mui/material/Avatar';
-import { collection , onSnapshot } from "firebase/firestore"; 
+import { collection , onSnapshot , query, orderBy} from "firebase/firestore"; 
 import db from "../../Firebase/firebase"
 
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -10,8 +10,12 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 function Table() {
     const [data,setdata]=useState([])
     
-    useEffect(()=>{
-        onSnapshot(collection(db,"Liste des donateurs"),(snapshot)=>{
+    useEffect(async ()=>{
+
+        const collectionRef = collection(db,"Liste des donateurs")
+        const q = query(collectionRef, orderBy("value","desc"));
+
+        onSnapshot(q,(snapshot)=>{
             setdata(snapshot.docs.map(doc => doc.data()));
         });
     })
@@ -21,10 +25,10 @@ function Table() {
             <table>
                 <thead>
                     <tr>
-                        <th>#</th>
                         <th>Img</th>
                         <th>Name</th>
                         <th>Date</th>
+                        <th>Classe</th>
                         <th>Valeur</th>
                         <th>réseaux sociaux</th>
                     </tr>
@@ -33,10 +37,10 @@ function Table() {
                     {data.map((req,i) =>{
                         return (
                             <tr key={i}>
-                                <td>{i+1}</td>
                                 <td><Avatar alt={req.Nom} src={req.img} /></td>
                                 <td>{req.Nom}</td>
                                 <td>{req.date}</td>
+                                <td>{req.classe}</td>
                                 <td>{req.value} TND</td>
                                 <td>
                                     {
