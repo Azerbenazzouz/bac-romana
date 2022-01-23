@@ -1,12 +1,17 @@
 import React from 'react'
 import Carouselp from '../Components/Carousel/Carouselp'
 import Top3 from '../Components/Top3/Top3'
+import Img1 from "../Assets/Carousel/1.png"
+import Img2 from "../Assets/Carousel/2.png"
+import Img3 from "../Assets/Carousel/3.png"
+import Img4 from "../Assets/Carousel/4.png"
+import Img5 from "../Assets/Carousel/5.png"
+import Img6 from "../Assets/Carousel/6.png"
+import Img7 from "../Assets/Carousel/7.png"
 
 function Home() {
     const photos = [
-        "https://img.zcool.cn/community/01b04859b24d65a8012028a9cf9007.jpg@2o.jpg",
-        "https://img.zcool.cn/community/01b04859b24d65a8012028a9cf9007.jpg@2o.jpg",
-        "https://img.zcool.cn/community/01b04859b24d65a8012028a9cf9007.jpg@2o.jpg"
+        Img1,Img2,Img3,Img4,Img5,Img6,Img7
     ]
     
     return (
